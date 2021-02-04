@@ -1,0 +1,51 @@
+
+body {
+	margin: 0;
+	color: white;
+	font-family: 'IBM Plex Serif', serif;
+}
+
+.container {
+	width: 1280px;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.blur-elem {
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	background-color: rgba(125, 125, 125, .15);
+	backdrop-filter: blur(5px);
+}
+
+@media (max-width: 940px){
+
+	.test {
+		flex-direction: column;
+	}
+
+	.test__elem {
+		width: 90%;
+		height: 150px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 50px;
+	}
+}
+
+@media (max-width: 560px) {
+	.test__elem {
+		width: 50%;
+	}
+}
+
+
+.text {
+	margin-top: 30px;
+	background-color: blue;
+	color: white;
+	text-shadow: 1px 1px 2px black, 0 0 1em red;
+	text-decoration: underline;
+	font-size: 32px;
+	border: 1px solid red;
+}

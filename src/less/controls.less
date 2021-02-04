@@ -1,0 +1,24 @@
+.controls__left {
+	position: absolute;
+	height: 100%;
+	width: 220px;
+	background: linear-gradient(90deg, rgba(0, 0, 0, 0.55) 50%, rgba(0, 0, 0, 0.15) 100%);
+	opacity: 0;
+	transition-duration: 350ms;
+}
+
+.controls__right {
+	position: absolute;
+	height: 100%;
+	width: 220px;
+	right: 0;
+	background: linear-gradient(90deg, rgba(0, 0, 0, 0.55) 50%, rgba(0, 0, 0, 0.15) 100%);
+	transform: rotate(180deg);
+	opacity: 0;
+	transition-duration: 350ms;
+}
+
+.controls__left:hover,
+.controls__right:hover {
+	opacity: 1;
+}

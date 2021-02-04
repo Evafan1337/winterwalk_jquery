@@ -1,0 +1,475 @@
+@keyframes background-image-fade {
+  0% {
+    opacity: 0;
+    background-color: black;
+  }
+  25% {
+    background-color: black;
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.controls__left {
+  position: absolute;
+  height: 100%;
+  width: 220px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.55) 50%, rgba(0, 0, 0, 0.15) 100%);
+  opacity: 0;
+  transition-duration: 350ms;
+}
+.controls__right {
+  position: absolute;
+  height: 100%;
+  width: 220px;
+  right: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.55) 50%, rgba(0, 0, 0, 0.15) 100%);
+  transform: rotate(180deg);
+  opacity: 0;
+  transition-duration: 350ms;
+}
+.controls__left:hover,
+.controls__right:hover {
+  opacity: 1;
+}
+
+body {
+  margin: 0;
+  color: white;
+  font-family: 'IBM Plex Serif', serif;
+}
+.container {
+  width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.blur-elem {
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(125, 125, 125, 0.15);
+  backdrop-filter: blur(5px);
+}
+@media (max-width: 940px) {
+  .test {
+    flex-direction: column;
+  }
+  .test__elem {
+    width: 90%;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 560px) {
+  .test__elem {
+    width: 50%;
+  }
+}
+.text {
+  margin-top: 30px;
+  background-color: blue;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 1em red;
+  text-decoration: underline;
+  font-size: 32px;
+  border: 1px solid red;
+}
+
+.preview {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0.15) 100%), url("../../src/images/DSC_0160.JPG");
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.preview__inner {
+  align-self: center;
+  padding: 50px;
+}
+.preview__header {
+  font-size: 48px;
+}
+.preview__text {
+  font-size: 32px;
+}
+.preview__button {
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: block;
+  width: 300px;
+  background-color: gray;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 24px;
+  transition-duration: 350ms;
+  font-family: 'IBM Plex Serif', serif;
+}
+.preview__button:hover {
+  background-color: black;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slide-bg {
+  from {
+    background: linear-gradient(90deg, #000000 50%, #000000 100%), url("../../src/images/DSC_0161.JPG");
+    background-size: cover;
+    /*background-color: black;*/
+  }
+  to {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%), url("../../src/images/DSC_0161.JPG");
+    background-size: cover;
+  }
+}
+.slide {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%), url("../../src/images/DSC_0161.JPG");
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.slide-1 {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%), url("../../src/images/DSC_0161.JPG");
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.slide-2 {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%), url("../../src/images/hRWWvBw2yTQ.jpg");
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.slide-3 {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%), url("../../src/images/IPlVo0KvNKY.jpg");
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.slide__inner {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.slide__text-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 24px;
+  align-self: center;
+  min-height: 550px;
+  margin-bottom: 100px;
+}
+.slide__text {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+}
+.slide__text--part2 {
+  /*margin-top: 150px;*/
+}
+.slide__bottom-info {
+  /*align-self: flex-end;*/
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.slide__header {
+  padding-left: 20px;
+}
+.slide__controls {
+  padding-left: 20px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+.slide__controls-elem {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 35px;
+  text-align: center;
+  background-color: gray;
+  transition-duration: 350ms;
+  font-size: 16px;
+  font-weight: bold;
+}
+.slide__controls-elem--read-text {
+  width: 150px;
+}
+.slide__controls-elem--read {
+  width: 225px;
+}
+.slide__controls-elem--right {
+  margin-left: 50%;
+  margin-right: 20px;
+}
+.slide__controls-elem:hover {
+  background-color: black;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+}
+
+.preview {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0.15) 100%), url("../../src/images/DSC_0160.JPG");
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.preview__inner {
+  align-self: center;
+  padding: 50px;
+}
+.preview__header {
+  font-size: 48px;
+}
+.preview__text {
+  font-size: 32px;
+}
+.preview__button {
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: block;
+  width: 300px;
+  background-color: gray;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 24px;
+  transition-duration: 350ms;
+  font-family: 'IBM Plex Serif', serif;
+}
+.preview__button:hover {
+  background-color: black;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+}
+@keyframes slide-bg {
+  from {
+    background: linear-gradient(90deg, #000000 50%, #000000 100%), url("../../src/images/DSC_0161.JPG");
+    background-size: cover;
+    /*background-color: black;*/
+  }
+  to {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%), url("../../src/images/DSC_0161.JPG");
+    background-size: cover;
+  }
+}
+.slide {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%), url("../../src/images/DSC_0161.JPG");
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.slide-1 {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%), url("../../src/images/DSC_0161.JPG");
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.slide-2 {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%), url("../../src/images/hRWWvBw2yTQ.jpg");
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.slide-3 {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%), url("../../src/images/IPlVo0KvNKY.jpg");
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.slide__inner {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.slide__text-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 24px;
+  align-self: center;
+  min-height: 550px;
+  margin-bottom: 100px;
+}
+.slide__text {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+}
+.slide__text--part2 {
+  /*margin-top: 150px;*/
+}
+.slide__bottom-info {
+  /*align-self: flex-end;*/
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.slide__header {
+  padding-left: 20px;
+}
+.slide__controls {
+  padding-left: 20px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+.slide__controls-elem {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 35px;
+  text-align: center;
+  background-color: gray;
+  transition-duration: 350ms;
+  font-size: 16px;
+  font-weight: bold;
+}
+.slide__controls-elem--read-text {
+  width: 150px;
+}
+.slide__controls-elem--read {
+  width: 225px;
+}
+.slide__controls-elem--right {
+  margin-left: 50%;
+  margin-right: 20px;
+}
+.slide__controls-elem:hover {
+  background-color: black;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+}
+@keyframes background-image-fade {
+  0% {
+    opacity: 0;
+    background-color: black;
+  }
+  25% {
+    background-color: black;
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.controls__left {
+  position: absolute;
+  height: 100%;
+  width: 220px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.55) 50%, rgba(0, 0, 0, 0.15) 100%);
+  opacity: 0;
+  transition-duration: 350ms;
+}
+.controls__right {
+  position: absolute;
+  height: 100%;
+  width: 220px;
+  right: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.55) 50%, rgba(0, 0, 0, 0.15) 100%);
+  transform: rotate(180deg);
+  opacity: 0;
+  transition-duration: 350ms;
+}
+.controls__left:hover,
+.controls__right:hover {
+  opacity: 1;
+}
+body {
+  margin: 0;
+  color: white;
+  font-family: 'IBM Plex Serif', serif;
+}
+.container {
+  width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.blur-elem {
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(125, 125, 125, 0.15);
+  backdrop-filter: blur(5px);
+}
+@media (max-width: 940px) {
+  .test {
+    flex-direction: column;
+  }
+  .test__elem {
+    width: 90%;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 560px) {
+  .test__elem {
+    width: 50%;
+  }
+}
+.text {
+  margin-top: 30px;
+  background-color: blue;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 1em red;
+  text-decoration: underline;
+  font-size: 32px;
+  border: 1px solid red;
+}
